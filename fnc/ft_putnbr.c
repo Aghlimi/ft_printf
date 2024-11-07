@@ -6,7 +6,7 @@
 /*   By: aghlimi <aghlimi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:06:35 by aghlimi           #+#    #+#             */
-/*   Updated: 2024/11/07 16:58:25 by aghlimi          ###   ########.fr       */
+/*   Updated: 2024/11/07 17:28:24 by aghlimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_putnbr2(unsigned int number, int isuns)
 		num = (int)number;
 	if (num < 0)
 	{
-		if (ft_putchr('-') == -1 && count++ != -1000)
+		if (count++ != -1000 && ft_putchr('-') == -1)
 			return (-1);
 		num = -num;
 	}

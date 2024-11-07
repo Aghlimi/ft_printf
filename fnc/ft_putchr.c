@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aghlimi <aghlimi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 09:49:06 by aghlimi           #+#    #+#             */
-/*   Updated: 2024/11/07 16:58:34 by aghlimi          ###   ########.fr       */
+/*   Created: 2024/11/07 14:46:34 by aghlimi           #+#    #+#             */
+/*   Updated: 2024/11/07 16:58:01 by aghlimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int	ft_putstr2(char *text);
-
-int	ft_putstr(va_list va_l)
+int	ft_putchr(char c)
 {
-	return (ft_putstr2(va_arg(va_l, char *)));
-}
-
-int	ft_putstr2(char *text)
-{
-	int	i;
-
-	i = 0;
-	if (!text)
-		return (write(1, "(null)", 6));
-	else
-		while (text[i])
-			if (ft_putchr(text[i++]) == -1)
-				return (-1);
-	return (i);
+	return ((write(1, &c, 1) == -1) * -2 + 1);
 }

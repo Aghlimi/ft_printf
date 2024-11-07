@@ -6,7 +6,7 @@
 /*   By: aghlimi <aghlimi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 09:53:07 by aghlimi           #+#    #+#             */
-/*   Updated: 2024/11/06 09:46:54 by aghlimi          ###   ########.fr       */
+/*   Updated: 2024/11/07 16:57:30 by aghlimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-int	ft_putstr(char *text);
-int	ft_putchar(char c);
-int	ft_putptr(void *ptr, int x);
-int	ft_putnbr(unsigned int number, int isuns);
-int	ft_puthex(unsigned int number, int X);
+int	ft_putstr(va_list val);
+int	ft_putchar(va_list val);
+int	ft_putptr(va_list val, int x);
+int	ft_putnbr(va_list val, int isuns);
+int	ft_puthex(va_list val, int X);
+int	ft_putchr(char c);
+
 #endif

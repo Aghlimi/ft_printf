@@ -6,13 +6,16 @@
 /*   By: aghlimi <aghlimi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 21:42:09 by aghlimi           #+#    #+#             */
-/*   Updated: 2024/11/05 11:32:13 by aghlimi          ###   ########.fr       */
+/*   Updated: 2024/11/07 15:39:56 by aghlimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int	ft_putchar(char c)
+int	ft_putchar(va_list val)
 {
-	return ((write(1, &c, 1), 1));
+	char	c;
+
+	c = va_arg(val, int);
+	return (write(1, &c, 1));
 }

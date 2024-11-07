@@ -1,5 +1,13 @@
 # **************************************************************************** #
-#                                   Makefile                                   #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: aghlimi <aghlimi@student.1337.ma>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/11/07 15:49:08 by aghlimi           #+#    #+#              #
+#    Updated: 2024/11/07 16:03:57 by aghlimi          ###   ########.fr        #
+#                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
@@ -7,7 +15,8 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 SRC_DIR = src
 INCLUDE = inc
-SRC_FILES = ft_printf.c  fnc/ft_putchar.c\
+SRC_FILES = ft_printf.c fnc/ft_putchar.c\
+fnc/ft_putchr.c\
 fnc/ft_puthex.c\
 fnc/ft_putnbr.c\
 fnc/ft_putptr.c\

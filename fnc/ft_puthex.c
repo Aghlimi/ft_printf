@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aghlimi <aghlimi@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 09:49:06 by aghlimi           #+#    #+#             */
-/*   Updated: 2024/10/30 09:56:47 by aghlimi          ###   ########.fr       */
+/*   Created: 2024/11/05 11:24:26 by aghlimi           #+#    #+#             */
+/*   Updated: 2024/11/05 11:31:53 by aghlimi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int	ft_putstr(char *text)
+int	ft_puthex(unsigned int number, int X)
 {
-	int	count;
+	char	*base;
+	int		count;
 
 	count = 0;
-	if (!text)
-		count += ft_putstr("(null)");
+	if (X)
+		base = "0123456789ABCDEF";
 	else
-		while (*text)
-		{
-			count += ft_putchar(*text);
-			text++;
-		}
+		base = "0123456789abcdef";
+	if (number > 15)
+		count += ft_puthex(number / 16, X);
+	count += ft_putchar(base[(number % 16)]);
 	return (count);
 }

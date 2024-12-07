@@ -27,6 +27,7 @@ SRC_FILES = ft_printf.c fnc/ft_putchar.c\
 
 OBJ_FILES = $(SRC_FILES:%.c=%.o)
 
+
 all: $(NAME)
 
 $(NAME): $(OBJ_FILES)
